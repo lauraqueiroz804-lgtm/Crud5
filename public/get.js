@@ -1,4 +1,4 @@
-fetch('http://:/pessoas')
+fetch(':/pessoas')
     .then(resposta => resposta.json())
     .then(dados => {
         var tabelaCorpo = document.getElementById('tabela-corpo')

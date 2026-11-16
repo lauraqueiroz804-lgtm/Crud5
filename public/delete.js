@@ -1,7 +1,7 @@
 function deletarDados() {
     var cpf = document.getElementById('identificadorCPF').value
 
-    fetch('http://:/pessoas')
+    fetch(':/pessoas')
         .then(response => response.json())
         .then(data => {
             const pessoa = data.find(pessoa => pessoa.cpf === cpf)
@@ -9,7 +9,7 @@ function deletarDados() {
             if (pessoa) {
                 if (!confirm('Remover o cliente ' + pessoa.nome + '?')) return
 
-                fetch(`http://:/pessoas/${pessoa.id}`, {
+                fetch(`:/pessoas/${pessoa.id}`, {
                     method: 'DELETE'
                 })
                 .then(() => {

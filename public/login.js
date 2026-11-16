@@ -7,7 +7,7 @@ function entrar() {
         return
     }
 
-    fetch('http://:/pessoas')
+    fetch(':/pessoas')
         .then(resposta => resposta.json())
         .then(dados => {
             var cliente = dados.find(p => p.cpf === cpf && p.senha === senha)

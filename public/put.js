@@ -3,7 +3,7 @@ var senhaAtual = '' // guarda a senha atual do cliente
 function buscarDados() {
     var cpf = document.getElementById('identificadorCPF').value
 
-    fetch('http://:/pessoas')
+    fetch(':/pessoas')
         .then(resposta => resposta.json())
         .then(dados => {
             var p = dados.find(pessoa => pessoa.cpf === cpf)
@@ -67,7 +67,7 @@ function atualizarDados() {
 
     var senha = senhaNova === '' ? senhaAtual : senhaNova
 
-    fetch(`http://:/pessoas/${id}`, {
+    fetch(`:/pessoas/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -17,6 +17,6 @@ app.get('/', function (req, res) {
 })
 
 server.listen(porta, () => {
-    console.log(`JSON SERVER está rodando em http://:${porta}`);
+    console.log(`JSON SERVER está rodando em :${porta}`);
 })
 
